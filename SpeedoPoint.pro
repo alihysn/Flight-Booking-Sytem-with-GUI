@@ -15,11 +15,13 @@ QT += sql
 SOURCES += \
     customer.cpp \
     main.cpp \
-    mainwindow.cpp
+    mainwindow.cpp \
+    paymentmethod.cpp
 
 HEADERS += \
     customer.h \
-    mainwindow.h
+    mainwindow.h \
+    paymentmethod.h
 
 FORMS += \
     customer.ui \
