@@ -14,15 +14,19 @@ QT += sql
 
 SOURCES += \
     customer.cpp \
+    findshortestpath.cpp \
     main.cpp \
     mainwindow.cpp \
     paymentmethod.cpp \
+    rating.cpp \
     search.cpp
 
 HEADERS += \
     customer.h \
+    findshortestpath.h \
     mainwindow.h \
     paymentmethod.h \
+    rating.h \
     search.h
 
 FORMS += \
