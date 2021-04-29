@@ -16,12 +16,14 @@ SOURCES += \
     customer.cpp \
     main.cpp \
     mainwindow.cpp \
-    paymentmethod.cpp
+    paymentmethod.cpp \
+    search.cpp
 
 HEADERS += \
     customer.h \
     mainwindow.h \
-    paymentmethod.h
+    paymentmethod.h \
+    search.h
 
 FORMS += \
     customer.ui \
