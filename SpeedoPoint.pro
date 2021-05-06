@@ -31,6 +31,7 @@ HEADERS += \
 
 FORMS += \
     customer.ui \
+    cutomerLogin.ui \
     mainwindow.ui
 
 # Default rules for deployment.

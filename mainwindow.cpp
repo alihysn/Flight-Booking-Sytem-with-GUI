@@ -14,9 +14,16 @@ MainWindow::~MainWindow()
     delete ui;
 }
 
-
-void MainWindow::on_pushButton_clicked()
+void MainWindow::on_customerOptions_currentIndexChanged(int index)
 {
-    Customer *cust = new Customer();
-    cust->show();
+    if (index == 0)
+    {
+        //do nothing
+    }
+    else if (index == 1)
+    {
+        Customer *cust = new Customer();
+        cust->show();
+        ui->customerOptions->setCurrentIndex(0);
+    }
 }
