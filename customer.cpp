@@ -23,15 +23,14 @@ void Customer::setPhotoPath(QString path)
 
 void Customer::setProfile(QString currName, QString currEmail, QString currUsername, QString passKey)
 {
-    Customer currCust;
     int lastID;
-    currCust.password = passKey;
-    currCust.name = currName;
-    currCust.email = currEmail;
-    currCust.username = currUsername;
-    currCust.NumberOfTrips=0;
-    currCust.points=0;
-    currCust.walletMoney=0;
+    password = passKey;
+    name = currName;
+    email = currEmail;
+    username = currUsername;
+    NumberOfTrips=0;
+    points=0;
+    walletMoney=0;
     QSqlDatabase database;
     database = QSqlDatabase::addDatabase("QSQLITE");
     database.setDatabaseName("/media/mohamed/01D674211A1C18801/AUC/Freshman/Spring 2021/CSCE1101-03 - Fundamentals of Computing II/Project/ProjectDB");
@@ -53,7 +52,7 @@ void Customer::setProfile(QString currName, QString currEmail, QString currUsern
     ui->nameSlot->setEnabled(false);
     ui->photoButton->setEnabled(false);
     ui->usernameSlot->setEnabled(false);
-    ui->passwordLabel->setEnabled(false);
+    ui->passwordSlot->setEnabled(false);
 }
 
 void Customer::on_createButton_clicked()
