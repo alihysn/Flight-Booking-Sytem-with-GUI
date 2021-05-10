@@ -13,21 +13,29 @@ QT += sql
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    card.cpp \
     customer.cpp \
     findshortestpath.cpp \
+    invoice.cpp \
+    mail.cpp \
     main.cpp \
     mainwindow.cpp \
     paymentmethod.cpp \
     rating.cpp \
-    search.cpp
+    search.cpp \
+    wallet.cpp
 
 HEADERS += \
+    card.h \
     customer.h \
     findshortestpath.h \
+    invoice.h \
+    mail.h \
     mainwindow.h \
     paymentmethod.h \
     rating.h \
-    search.h
+    search.h \
+    wallet.h
 
 FORMS += \
     customer.ui \
