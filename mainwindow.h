@@ -3,6 +3,7 @@
 
 #include <QMainWindow>
 #include <QVector>
+#include<vector>
 #include"customer.h"
 
 QT_BEGIN_NAMESPACE
@@ -15,6 +16,8 @@ class MainWindow : public QMainWindow
 
 public:
     MainWindow(QWidget *parent = nullptr);
+    QVector<Customer*> data;
+    void refresher();
     ~MainWindow();
 
 private slots:
@@ -23,4 +26,5 @@ private slots:
 private:
     Ui::MainWindow *ui;
 };
+
 #endif // MAINWINDOW_H

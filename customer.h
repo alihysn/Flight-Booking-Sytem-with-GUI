@@ -4,6 +4,7 @@
 #include <QMainWindow>
 
 namespace Ui {
+
 class Customer;
 }
 
@@ -15,6 +16,7 @@ public:
     explicit Customer(QWidget *parent = nullptr);
     void setProfile(QString name, QString currEmail, QString currUsername, QString passKey);
     void setPhotoPath(QString path);
+    void readData(int id, QString nam, QString mail, QString userName,QString pass, QString pic, float wall, int pts, int numTrips);
     ~Customer();
 
 private slots:

@@ -2,7 +2,8 @@
 #include "ui_customer.h"
 #include <QFileDialog>
 #include <QtSql/QSqlDatabase>
-#include<QtSql/QSqlQuery>
+#include <QtSql/QSqlQuery>
+#include <QMessageBox>
 
 Customer::Customer(QWidget *parent) :
     QMainWindow(parent),
@@ -53,6 +54,23 @@ void Customer::setProfile(QString currName, QString currEmail, QString currUsern
     ui->photoButton->setEnabled(false);
     ui->usernameSlot->setEnabled(false);
     ui->passwordSlot->setEnabled(false);
+    QMessageBox message;
+    message.setText("Account created successfully !");
+    message.exec();
+    this->close();
+}
+
+void Customer::readData(int idT, QString nam, QString mail, QString userName,QString pass, QString pic, float wall, int pts, int numTrips)
+{
+    id = idT;
+    name = nam;
+    email = mail;
+    username = userName;
+    password = pass;
+    photo = pic;
+    walletMoney = wall;
+    points = pts;
+    NumberOfTrips = numTrips;
 }
 
 void Customer::on_createButton_clicked()
