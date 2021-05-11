@@ -13,6 +13,7 @@ QT += sql
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    Hsearch.cpp \
     card.cpp \
     customer.cpp \
     findshortestpath.cpp \
@@ -23,9 +24,11 @@ SOURCES += \
     paymentmethod.cpp \
     rating.cpp \
     search.cpp \
+    sflights.cpp \
     wallet.cpp
 
 HEADERS += \
+    Hsearch.h \
     card.h \
     customer.h \
     findshortestpath.h \
@@ -35,12 +38,15 @@ HEADERS += \
     paymentmethod.h \
     rating.h \
     search.h \
+    sflights.h \
     wallet.h
 
 FORMS += \
+    Hsearch.ui \
     customer.ui \
     cutomerLogin.ui \
-    mainwindow.ui
+    mainwindow.ui \
+    sflights.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

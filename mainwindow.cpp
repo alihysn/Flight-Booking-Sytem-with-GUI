@@ -3,7 +3,8 @@
 #include "customer.h"
 #include<QtSql/QSqlDatabase>
 #include<QtSql/QSqlQuery>
-
+#include "sflights.h"
+#include "Hsearch.h"
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
@@ -61,4 +62,16 @@ void MainWindow::on_customerOptions_currentIndexChanged(int index)
         Customer *cust = new Customer();
         cust->show();
     }
+}
+
+void MainWindow::on_pushButton_clicked()
+{
+    SFlights *pagetwo =new SFlights;
+    pagetwo->show();
+}
+
+void MainWindow::on_pushButton_2_clicked()
+{
+    Hsearch *pagethree =new Hsearch;
+    pagethree->show();
 }
