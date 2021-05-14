@@ -5,6 +5,8 @@
 #include<QtSql/QSqlQuery>
 #include "sflights.h"
 #include "Hsearch.h"
+#include"customerlogin.h"
+
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
@@ -18,11 +20,11 @@ MainWindow::MainWindow(QWidget *parent)
     query.exec("SELECT * from Customers");
     while(query.next())
     {
-        Customer currCust;
+        Customer *currCust = new Customer();
         if (query.value(0).toInt() != 0)
         {
-        currCust.readData(query.value(0).toInt(), query.value(1).toString(), query.value(2).toString(), query.value(3).toString(),query.value(4).toString(),query.value(5).toString(),query.value(6).toFloat(),query.value(7).toInt(), query.value(8).toInt());
-        data.push_back(&currCust);
+        currCust->readData(query.value(0).toInt(), query.value(1).toString(), query.value(2).toString(), query.value(3).toString(),query.value(4).toString(),query.value(5).toString(),query.value(6).toFloat(),query.value(7).toInt(), query.value(8).toInt());
+        data.push_back(currCust);
         }
     }
     database.close();
@@ -39,11 +41,11 @@ void MainWindow::refresher()
     query.exec("SELECT * from Customers");
     while(query.next())
     {
-        Customer currCust;
+        Customer *currCust = new Customer();
         if (query.value(0).toInt() != 0)
         {
-        currCust.readData(query.value(0).toInt(), query.value(1).toString(), query.value(2).toString(), query.value(3).toString(),query.value(4).toString(),query.value(5).toString(),query.value(6).toFloat(),query.value(7).toInt(), query.value(8).toInt());
-        data.push_back(&currCust);
+        currCust->readData(query.value(0).toInt(), query.value(1).toString(), query.value(2).toString(), query.value(3).toString(),query.value(4).toString(),query.value(5).toString(),query.value(6).toFloat(),query.value(7).toInt(), query.value(8).toInt());
+        data.push_back(currCust);
         }
     }
     database.close();
@@ -56,11 +58,19 @@ MainWindow::~MainWindow()
 
 void MainWindow::on_customerOptions_currentIndexChanged(int index)
 {
-    refresher();
     if (index == 1)
     {
+        refresher();
         Customer *cust = new Customer();
         cust->show();
+        ui->customerOptions->setCurrentIndex(0);
+    }
+    else if (index == 2)
+    {
+        refresher();
+        CustomerLogin *login = new CustomerLogin();
+        login->startWindow(data, &currentCust);
+        ui->customerOptions->setCurrentIndex(0);
     }
 }
 

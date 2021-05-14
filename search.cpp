@@ -1,4 +1,4 @@
-#include "Search.h"
+#include "search.h"
 #include <iostream>
 #include <QMainWindow>
 using namespace std;

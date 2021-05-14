@@ -16,6 +16,7 @@ SOURCES += \
     Hsearch.cpp \
     card.cpp \
     customer.cpp \
+    customerlogin.cpp \
     findshortestpath.cpp \
     invoice.cpp \
     mail.cpp \
@@ -31,6 +32,7 @@ HEADERS += \
     Hsearch.h \
     card.h \
     customer.h \
+    customerlogin.h \
     findshortestpath.h \
     invoice.h \
     mail.h \
@@ -44,7 +46,7 @@ HEADERS += \
 FORMS += \
     Hsearch.ui \
     customer.ui \
-    cutomerLogin.ui \
+    customerlogin.ui \
     mainwindow.ui \
     sflights.ui
 

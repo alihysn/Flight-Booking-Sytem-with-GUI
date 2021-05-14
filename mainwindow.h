@@ -17,6 +17,7 @@ class MainWindow : public QMainWindow
 public:
     MainWindow(QWidget *parent = nullptr);
     QVector<Customer*> data;
+    Customer currentCust;
     void refresher();
     ~MainWindow();
 

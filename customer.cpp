@@ -79,9 +79,9 @@ void Customer::on_createButton_clicked()
     QString currName;
     QString currEmail;
     QString currPass;
-    currName = ui->nameSlot->toPlainText();
-    currEmail = ui->emailSlot->toPlainText();
-    chosenUsername = ui->usernameSlot->toPlainText();
+    currName = ui->nameSlot->text();
+    currEmail = ui->emailSlot->text();
+    chosenUsername = ui->usernameSlot->text();
     currPass = ui->passwordSlot->text();
     setProfile(currName,currEmail, chosenUsername, currPass);
 }
@@ -102,5 +102,17 @@ void Customer::on_showPassKey_clicked()
     else if (ui->showPassKey->isChecked() == false)
     {
         ui->passwordSlot->setEchoMode(QLineEdit::Password);
+    }
+}
+
+bool Customer::checker(QString userN, QString userP)
+{
+    if (username == userN && password == userP)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
     }
 }
