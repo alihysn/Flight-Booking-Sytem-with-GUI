@@ -6,6 +6,7 @@
 #include "sflights.h"
 #include "Hsearch.h"
 #include"customerlogin.h"
+#include"mail.h"
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -84,4 +85,10 @@ void MainWindow::on_pushButton_2_clicked()
 {
     Hsearch *pagethree =new Hsearch;
     pagethree->show();
+}
+
+void MainWindow::on_pushButton_3_clicked()
+{
+   mail* M1=new mail();
+   M1->show();
 }

@@ -1,21 +1,34 @@
 #include "mail.h"
 #include "ui_mail.h"
 #include<QMessageBox>
-Mail::Mail(QWidget *parent) :
+
+mail::mail(QWidget *parent) :
     QDialog(parent),
-    ui(new Ui::Mail)
+    ui(new Ui::mail)
 {
     ui->setupUi(this);
 }
 
-Mail::~Mail()
+mail::~mail()
 {
     delete ui;
 }
 
-void Mail::on_pushButton_clicked()
+void mail::on_pushButton_clicked()
 {
-    QMessageBox::question(this, "Mail Confirmation","Do you want an email confirmation?",
-                              QMessageBox::Yes|QMessageBox::No);
+    QMessageBox::StandardButton reply=QMessageBox::question(this, "Mail Confirmation","Do you want an email confirmation?",QMessageBox::Yes|QMessageBox::No);
+     QMessageBox Box;
+    if (reply==QMessageBox::No)
+    {
+        Box.setText(" An email will not be sent");
+        Box.setWindowTitle("Mail Confrimation");
+        Box.exec();
+        this->close();}
+    else
 
+       { Box.setText(" An email has been sent");
+         Box.setWindowTitle(" Mail Confrimation");
+         Box.exec();
+         this->close();
+}
 }

@@ -4,19 +4,22 @@
 #include <QDialog>
 
 namespace Ui {
-class Mail;
+class mail;
 }
 
-class Mail : public QDialog
+class mail : public QDialog
 {
     Q_OBJECT
 
 public:
-    explicit Mail(QWidget *parent = nullptr);
-    ~Mail();
+    explicit mail(QWidget *parent = nullptr);
+    ~mail();
+
+private slots:
+    void on_pushButton_clicked();
 
 private:
-    Ui::Mail *ui;
+    Ui::mail *ui;
 };
 
 #endif // MAIL_H
