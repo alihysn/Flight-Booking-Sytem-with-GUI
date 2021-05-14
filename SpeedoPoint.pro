@@ -19,7 +19,6 @@ SOURCES += \
     customerlogin.cpp \
     findshortestpath.cpp \
     invoice.cpp \
-    mail.cpp \
     main.cpp \
     mainwindow.cpp \
     paymentmethod.cpp \
@@ -35,7 +34,6 @@ HEADERS += \
     customerlogin.h \
     findshortestpath.h \
     invoice.h \
-    mail.h \
     mainwindow.h \
     paymentmethod.h \
     rating.h \
