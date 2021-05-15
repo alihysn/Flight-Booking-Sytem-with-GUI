@@ -15,6 +15,9 @@ public:
     explicit SFlights(QWidget *parent = nullptr);
     ~SFlights();
 
+private slots:
+    void on_radioButton_toggled(bool checked);
+
 private:
     Ui::SFlights *ui;
 };
