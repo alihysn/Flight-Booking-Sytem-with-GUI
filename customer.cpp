@@ -116,3 +116,13 @@ bool Customer::checker(QString userN, QString userP)
         return false;
     }
 }
+
+QString Customer::getName()
+{
+    return name;
+}
+
+Customer* Customer::returnCust()
+{
+    return this;
+}

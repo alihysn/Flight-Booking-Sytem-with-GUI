@@ -17,7 +17,6 @@ class MainWindow : public QMainWindow
 public:
     MainWindow(QWidget *parent = nullptr);
     QVector<Customer*> data;
-    Customer currentCust;
     void refresher();
     ~MainWindow();
 
@@ -32,6 +31,8 @@ private slots:
 
 private:
     Ui::MainWindow *ui;
+    bool isLoggedIn=false;
+    int custIndex;
 };
 
 #endif // MAINWINDOW_H

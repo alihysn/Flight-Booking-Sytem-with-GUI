@@ -70,7 +70,7 @@ void MainWindow::on_customerOptions_currentIndexChanged(int index)
     {
         refresher();
         CustomerLogin *login = new CustomerLogin();
-        login->startWindow(data, &currentCust);
+        login->startWindow(data, &custIndex, &isLoggedIn);
         ui->customerOptions->setCurrentIndex(0);
     }
 }
@@ -89,6 +89,8 @@ void MainWindow::on_pushButton_2_clicked()
 
 void MainWindow::on_pushButton_3_clicked()
 {
-   mail* M1=new mail();
-   M1->show();
+    if(isLoggedIn == true)
+    {
+        ui->helloMsg->setText(data[custIndex]->getName());
+    }
 }

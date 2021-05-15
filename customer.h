@@ -2,6 +2,7 @@
 #define CUSTOMER_H
 
 #include <QMainWindow>
+#include"trip.h"
 
 namespace Ui {
 
@@ -18,6 +19,8 @@ public:
     void setPhotoPath(QString path);
     void readData(int id, QString nam, QString mail, QString userName,QString pass, QString pic, float wall, int pts, int numTrips);
     bool checker(QString userN, QString userP);
+    QString getName();
+    Customer* returnCust();
     ~Customer();
 
 private slots:
@@ -37,7 +40,7 @@ private:
     float walletMoney;
     int points;
     int NumberOfTrips;
-    //Trip currentTrip
+    Trip currentTrip;
     Ui::Customer *ui;
 };
 

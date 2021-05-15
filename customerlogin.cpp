@@ -14,11 +14,12 @@ CustomerLogin::~CustomerLogin()
     delete ui;
 }
 
-void CustomerLogin::startWindow(QVector<Customer *> custs, Customer *currCust)
+void CustomerLogin::startWindow(QVector<Customer *> custs, int *index, bool *isLoggedIN)
 {
     CustomerLogin *login = new CustomerLogin();
     login->currData = custs;
-    login->cust = currCust;
+    login->number = index;
+    login->loggedIn = isLoggedIN;
     login->show();
 }
 
@@ -31,17 +32,20 @@ void CustomerLogin::on_loginButton_clicked()
     {
         if (currData[i]->checker(u,p))
         {
-            cust = currData[i];
+
             QMessageBox box;
             box.setText("Logged in successfully !");
             box.exec();
+            *number = i;
             wrong = false;
+            *loggedIn = true;
             this->close();
             break;
         }
         else
         {
             wrong = true;
+            *loggedIn = false;
         }
     }
     if (wrong)

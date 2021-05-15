@@ -14,7 +14,7 @@ class CustomerLogin : public QMainWindow
 
 public:
     explicit CustomerLogin(QWidget *parent = nullptr);
-    void startWindow(QVector<Customer*> custs, Customer *currCust);
+    void startWindow(QVector<Customer*> custs, int *ind, bool *isLoggedIN);
     ~CustomerLogin();
 
 private slots:
@@ -26,6 +26,8 @@ private:
     Ui::CustomerLogin *ui;
     QVector <Customer*> currData;
     Customer *cust;
+    bool *loggedIn;
+    int *number;
 };
 
 #endif // CUSTOMERLOGIN_H

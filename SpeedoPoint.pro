@@ -26,6 +26,7 @@ SOURCES += \
     rating.cpp \
     search.cpp \
     sflights.cpp \
+    trip.cpp \
     wallet.cpp
 
 HEADERS += \
@@ -41,6 +42,7 @@ HEADERS += \
     rating.h \
     search.h \
     sflights.h \
+    trip.h \
     wallet.h
 
 FORMS += \
