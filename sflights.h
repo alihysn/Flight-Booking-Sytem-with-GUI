@@ -16,7 +16,7 @@ public:
     ~SFlights();
 
 private slots:
-    void on_radioButton_toggled(bool checked);
+    void on_pushButton_clicked();
 
 private:
     Ui::SFlights *ui;

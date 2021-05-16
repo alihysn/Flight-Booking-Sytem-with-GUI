@@ -7,10 +7,13 @@ class Search
 public:
 
     Search();
-void SearchByPrice(QVector<float> *fin);
+QVector<float> SearchByPrice();
 void SearchByRatings();
 void SearchByDistancefromairport();
 void SearchByFacilities();
+
+private:
+QVector<float> sort;
 };
 
 #endif // SEARCH_H

@@ -11,34 +11,32 @@ Search::Search()
 {
 
 }
-void Search::SearchByPrice(QVector<float> *fin)
+QVector<float> Search::SearchByPrice()
 {
-    QVector<float> allPrices;
     QSqlDatabase database;
     database = QSqlDatabase::addDatabase("QSQLITE");
     database.setDatabaseName("/media/mohamed/01D674211A1C18801/AUC/Freshman/Spring 2021/CSCE1101-03 - Fundamentals of Computing II/Project/ProjectDB");
     database.open();
     QSqlQuery query;
-    query.prepare("SELECT Price from Flights");
+    query.exec("SELECT Price from Flights");
     while(query.next())
     {
-        query.exec();
-        allPrices.push_back(query.value(0).toFloat());
+        sort.push_back(query.value(0).toFloat());
     }
     database.close();
-    for(int i = 0; i<allPrices.size(); i++)
+    for(int i = 0; i<sort.size(); i++)
     {
-        for (int j=1; j<allPrices.size(); j++)
+        for (int j=0; j<sort.size(); j++)
         {
-            if (allPrices[j] < allPrices[i])
+            if (sort[j] > sort[i])
             {
-                float temp = allPrices[i];
-                allPrices[i] = allPrices[j];
-                allPrices[j] = temp;
+                float temp = sort[i];
+                sort[i] = sort[j];
+                sort[j] = temp;
             }
         }
     }
-    *fin = allPrices;
+    return sort;
 }
 void Search::SearchByRatings()
 {
