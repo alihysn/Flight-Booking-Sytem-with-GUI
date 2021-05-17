@@ -126,3 +126,12 @@ Customer* Customer::returnCust()
 {
     return this;
 }
+
+float Customer::priceGetter()
+{
+    float pr = currentTrip.getTotalPrice();
+    QString st = QString::number(pr);
+    QMessageBox box;
+    box.setText(st);
+    box.exec();
+}

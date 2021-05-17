@@ -7,6 +7,7 @@
 #include "Hsearch.h"
 #include"customerlogin.h"
 #include"mail.h"
+#include "invoice.h"
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -93,4 +94,10 @@ void MainWindow::on_pushButton_3_clicked()
     {
         ui->helloMsg->setText(data[custIndex]->getName());
     }
+}
+
+void MainWindow::on_pushButton_7_clicked()
+{
+    Invoice *newInvoice = new Invoice();
+    newInvoice->ShowInvoice(data[custIndex]);
 }

@@ -4,3 +4,8 @@ Trip::Trip()
 {
 
 }
+
+float Trip::getTotalPrice()
+{
+    return totalPrice;
+}

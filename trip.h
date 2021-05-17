@@ -21,7 +21,7 @@ public:
     void updateTrip();
     float rate();
     void problemSetter();
-
+    float getTotalPrice();
 };
 
 #endif // TRIP_H
