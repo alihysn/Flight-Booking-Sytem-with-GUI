@@ -127,11 +127,12 @@ Customer* Customer::returnCust()
     return this;
 }
 
-float Customer::priceGetter()
+void Customer::priceGetter()
 {
     float pr = currentTrip.getTotalPrice();
     QString st = QString::number(pr);
     QMessageBox box;
     box.setText(st);
+    box.setWindowTitle("Total price:");
     box.exec();
 }

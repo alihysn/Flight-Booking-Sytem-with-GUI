@@ -11,6 +11,7 @@ void Invoice::ShowInvoice(Customer *currentCustomer)
 {
     QMessageBox box;
     box.setText(currentCustomer->getName());
+    box.setWindowTitle("User name:");
     box.exec();
     currentCustomer->priceGetter();
 }

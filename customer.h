@@ -21,7 +21,7 @@ public:
     bool checker(QString userN, QString userP);
     QString getName();
     Customer* returnCust();
-    float priceGetter();
+    void priceGetter();
     ~Customer();
 
 private slots:

@@ -8,6 +8,7 @@
 #include"customerlogin.h"
 #include"mail.h"
 #include "invoice.h"
+#include<QMessageBox>
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -30,6 +31,8 @@ MainWindow::MainWindow(QWidget *parent)
         }
     }
     database.close();
+    ui->calendar1->setVisible(false);
+    ui->calendar2->setVisible(false);
 }
 
 void MainWindow::refresher()
@@ -98,6 +101,16 @@ void MainWindow::on_pushButton_3_clicked()
 
 void MainWindow::on_pushButton_7_clicked()
 {
-    Invoice *newInvoice = new Invoice();
-    newInvoice->ShowInvoice(data[custIndex]);
+    if (isLoggedIn == false)
+    {
+        QMessageBox box;
+        box.setText("User is not logged in !");
+        box.setWindowTitle("Error");
+        box.exec();
+    }
+    else
+    {
+        Invoice *newInvoice = new Invoice();
+        newInvoice->ShowInvoice(data[custIndex]);
+    }
 }
