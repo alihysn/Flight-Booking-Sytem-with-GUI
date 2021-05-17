@@ -8,9 +8,10 @@ public:
 
     Search();
 QVector<float> SearchByPrice();
-void SearchByRatings();
-void SearchByDistancefromairport();
-void SearchByFacilities();
+QVector<float> SearchByRatingF();
+QVector<float> SearchByRatingH();
+QVector<float> SearchByDistancefromairport();
+QString SearchByFacilities();
 
 private:
 QVector<float> sort;
