@@ -13,7 +13,7 @@
   <property name="windowTitle">
    <string>Dialog</string>
   </property>
-  <widget class="QPushButton" name="pushButton">
+  <widget class="QPushButton" name="orderbyprice">
    <property name="geometry">
     <rect>
      <x>280</x>
@@ -39,7 +39,7 @@
     <string>search flights according to</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton_2">
+  <widget class="QPushButton" name="orderbyrating">
    <property name="geometry">
     <rect>
      <x>284</x>
@@ -52,7 +52,7 @@
     <string>Rating</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton_3">
+  <widget class="QPushButton" name="orderoflocation">
    <property name="geometry">
     <rect>
      <x>290</x>
@@ -65,7 +65,7 @@
     <string>location</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton_4">
+  <widget class="QPushButton" name="orderfordestination">
    <property name="geometry">
     <rect>
      <x>290</x>

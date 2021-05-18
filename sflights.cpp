@@ -29,14 +29,15 @@ void SFlights::on_pushButton_clicked()
     database.setDatabaseName("/media/mohamed/01D674211A1C18801/AUC/Freshman/Spring 2021/CSCE1101-03 - Fundamentals of Computing II/Project/ProjectDB");
     database.open();
     QSqlQuery query;
-    query.prepare("SELECT Airline, Price FROM Flights WHERE Price=10");
+    query.prepare("SELECT Airline, Price, Rating FROM Flights WHERE Price=10");
     query.exec();
     QString test;
     while (query.next())
     {
         test = query.value(0).toString();
     }
-    box.setWindowTitle(test);
+    box.setWindowTitle("sorted by price");
+    box.setText(test);
     box.exec();
     database.close();
 }
@@ -52,7 +53,7 @@ void SFlights::on_pushButton_2_clicked()
     database.setDatabaseName("/media/mohamed/01D674211A1C18801/AUC/Freshman/Spring 2021/CSCE1101-03 - Fundamentals of Computing II/Project/ProjectDB");
     database.open();
     QSqlQuery query;
-    query.prepare("SELECT Airline, Price FROM Flights WHERE Rating= final");
+    query.prepare("SELECT Airline, Price, Rating FROM Flights WHERE Rating= final");
     query.exec();
     QString test;
     while (query.next())
@@ -60,6 +61,54 @@ void SFlights::on_pushButton_2_clicked()
         test = query.value(0).toString();
     }
     box.setWindowTitle(test);
+    box.exec();
+    database.close();
+}
+
+void SFlights::on_pushButton_3_clicked()
+{
+    QMessageBox box;
+    QString fromm;
+   // Search *searcher = new Search();
+    //fromm = searcher->SearchByRatingF();
+    QSqlDatabase database;
+    database = QSqlDatabase::addDatabase("QSQLITE");
+    database.setDatabaseName("/media/mohamed/01D674211A1C18801/AUC/Freshman/Spring 2021/CSCE1101-03 - Fundamentals of Computing II/Project/ProjectDB");
+    database.open();
+    QSqlQuery query;
+    query.prepare("SELECT Airline, Price, Rating FROM Flights WHERE from= fromm");
+    query.exec();
+    QString test;
+    while (query.next())
+    {
+        test = query.value(0).toString();
+    }
+    box.setWindowTitle("list of planes ");
+    box.setText(test);
+    box.exec();
+    database.close();
+}
+
+void SFlights::on_pushButton_4_clicked()
+{
+    QMessageBox box;
+    QString too;
+   // Search *searcher = new Search();
+    //fromm = searcher->SearchByRatingF();
+    QSqlDatabase database;
+    database = QSqlDatabase::addDatabase("QSQLITE");
+    database.setDatabaseName("/media/mohamed/01D674211A1C18801/AUC/Freshman/Spring 2021/CSCE1101-03 - Fundamentals of Computing II/Project/ProjectDB");
+    database.open();
+    QSqlQuery query;
+    query.prepare("SELECT Airline, Price, Rating FROM Flights WHERE to= too");
+    query.exec();
+    QString test;
+    while (query.next())
+    {
+        test = query.value(0).toString();
+    }
+    box.setWindowTitle("list of planes ");
+    box.setText(test);
     box.exec();
     database.close();
 }
