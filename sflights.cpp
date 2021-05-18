@@ -23,7 +23,7 @@ void SFlights::on_pushButton_clicked()
     QMessageBox box;
     QVector<float> final;
     Search *searcher = new Search();
-    final = searcher->SearchByPrice();
+    final = searcher->SearchByPriceF();
     QSqlDatabase database;
     database = QSqlDatabase::addDatabase("QSQLITE");
     database.setDatabaseName("/media/mohamed/01D674211A1C18801/AUC/Freshman/Spring 2021/CSCE1101-03 - Fundamentals of Computing II/Project/ProjectDB");

@@ -7,7 +7,8 @@ class Search
 public:
 
     Search();
-QVector<float> SearchByPrice();
+QVector<float> SearchByPriceF();
+QVector<float> SearchByPriceH();
 QVector<float> SearchByRatingF();
 QVector<float> SearchByRatingH();
 QVector<float> SearchByDistancefromairport();

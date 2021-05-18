@@ -16,10 +16,10 @@
   <widget class="QPushButton" name="orderbyprice">
    <property name="geometry">
     <rect>
-     <x>280</x>
-     <y>40</y>
+     <x>290</x>
+     <y>60</y>
      <width>89</width>
-     <height>25</height>
+     <height>31</height>
     </rect>
    </property>
    <property name="text">
@@ -29,7 +29,7 @@
   <widget class="QLabel" name="label">
    <property name="geometry">
     <rect>
-     <x>126</x>
+     <x>120</x>
      <y>10</y>
      <width>151</width>
      <height>31</height>
@@ -42,10 +42,10 @@
   <widget class="QPushButton" name="orderbyrating">
    <property name="geometry">
     <rect>
-     <x>284</x>
-     <y>82</y>
-     <width>81</width>
-     <height>21</height>
+     <x>290</x>
+     <y>90</y>
+     <width>91</width>
+     <height>31</height>
     </rect>
    </property>
    <property name="text">
@@ -56,9 +56,9 @@
    <property name="geometry">
     <rect>
      <x>290</x>
-     <y>120</y>
-     <width>75</width>
-     <height>23</height>
+     <y>122</y>
+     <width>91</width>
+     <height>31</height>
     </rect>
    </property>
    <property name="text">
@@ -70,8 +70,8 @@
     <rect>
      <x>290</x>
      <y>160</y>
-     <width>75</width>
-     <height>23</height>
+     <width>91</width>
+     <height>31</height>
     </rect>
    </property>
    <property name="text">

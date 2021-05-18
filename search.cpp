@@ -11,7 +11,7 @@ Search::Search()
 {
 
 }
-QVector<float> Search::SearchByPrice()
+QVector<float> Search::SearchByPriceF()
 {
     QSqlDatabase database;
     database = QSqlDatabase::addDatabase("QSQLITE");
