@@ -9,9 +9,8 @@ class Rating
         float Arate;
     public:
         Rating();
-        float rateflight();
-        float ratehotel();
-        float averagerate();
+        void rateflight(float c);
+        void ratehotel(float d);
 };
 
 #endif // RATING_H

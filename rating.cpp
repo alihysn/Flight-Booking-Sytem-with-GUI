@@ -4,15 +4,12 @@ Rating::Rating()
 {
 
 }
-float Rating::rateflight()
+void Rating::rateflight(float c)
 {
 
 }
-float Rating::ratehotel()
+void Rating::ratehotel(float d)
 {
 
 }
-float Rating::averagerate()
-{
 
-}
