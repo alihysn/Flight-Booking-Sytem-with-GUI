@@ -23,6 +23,7 @@ SOURCES += \
     main.cpp \
     mainwindow.cpp \
     paymentmethod.cpp \
+    price.cpp \
     rating.cpp \
     search.cpp \
     sflights.cpp \
@@ -39,6 +40,7 @@ HEADERS += \
     mail.h \
     mainwindow.h \
     paymentmethod.h \
+    price.h \
     rating.h \
     search.h \
     sflights.h \

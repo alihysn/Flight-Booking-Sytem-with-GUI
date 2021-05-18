@@ -40,3 +40,26 @@ void SFlights::on_pushButton_clicked()
     box.exec();
     database.close();
 }
+
+void SFlights::on_pushButton_2_clicked()
+{
+    QMessageBox box;
+    QVector<float> final;
+    Search *searcher = new Search();
+    final = searcher->SearchByRatingF();
+    QSqlDatabase database;
+    database = QSqlDatabase::addDatabase("QSQLITE");
+    database.setDatabaseName("/media/mohamed/01D674211A1C18801/AUC/Freshman/Spring 2021/CSCE1101-03 - Fundamentals of Computing II/Project/ProjectDB");
+    database.open();
+    QSqlQuery query;
+    query.prepare("SELECT Airline, Price FROM Flights WHERE Rating= final");
+    query.exec();
+    QString test;
+    while (query.next())
+    {
+        test = query.value(0).toString();
+    }
+    box.setWindowTitle(test);
+    box.exec();
+    database.close();
+}
