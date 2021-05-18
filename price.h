@@ -7,8 +7,8 @@ class Price
    int priceofplane;
    int priceofhotel;
 public:
-   int getprice()
-   int
+   int getpriceF();
+   int getpriceH();
     Price();
 };
 
