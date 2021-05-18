@@ -13,3 +13,7 @@ int Price::getpriceH()
 {
     return priceofhotel;
 }
+int Price:: getTotalPrice()
+{
+    return totalPrice;
+}
