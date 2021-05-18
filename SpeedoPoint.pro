@@ -25,6 +25,7 @@ SOURCES += \
     paymentmethod.cpp \
     price.cpp \
     rating.cpp \
+    ratingpage.cpp \
     search.cpp \
     sflights.cpp \
     trip.cpp \
@@ -42,6 +43,7 @@ HEADERS += \
     paymentmethod.h \
     price.h \
     rating.h \
+    ratingpage.h \
     search.h \
     sflights.h \
     trip.h \
@@ -53,6 +55,7 @@ FORMS += \
     customerlogin.ui \
     mail.ui \
     mainwindow.ui \
+    ratingpage.ui \
     sflights.ui
 
 # Default rules for deployment.

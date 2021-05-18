@@ -114,3 +114,8 @@ void MainWindow::on_pushButton_7_clicked()
         newInvoice->ShowInvoice(data[custIndex]);
     }
 }
+
+void MainWindow::on_pushButton_8_clicked()
+{
+
+}
