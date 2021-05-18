@@ -17,7 +17,9 @@ SOURCES += \
     card.cpp \
     customer.cpp \
     customerlogin.cpp \
+    facilities.cpp \
     findshortestpath.cpp \
+    hotel.cpp \
     invoice.cpp \
     mail.cpp \
     main.cpp \
@@ -26,6 +28,7 @@ SOURCES += \
     price.cpp \
     rating.cpp \
     ratingpage.cpp \
+    room.cpp \
     search.cpp \
     sflights.cpp \
     trip.cpp \
@@ -36,7 +39,9 @@ HEADERS += \
     card.h \
     customer.h \
     customerlogin.h \
+    facilities.h \
     findshortestpath.h \
+    hotel.h \
     invoice.h \
     mail.h \
     mainwindow.h \
@@ -44,6 +49,7 @@ HEADERS += \
     price.h \
     rating.h \
     ratingpage.h \
+    room.h \
     search.h \
     sflights.h \
     trip.h \
