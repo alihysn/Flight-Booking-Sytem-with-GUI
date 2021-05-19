@@ -119,3 +119,32 @@ void MainWindow::on_pushButton_8_clicked()
 {
 
 }
+
+void MainWindow::on_pushButton_9_clicked()
+{
+    QMessageBox Box1;
+   QMessageBox:: StandardButton reply= QMessageBox::question(this, "Payment","Would you like to pay through card?",QMessageBox::Yes|QMessageBox::No);
+
+    if (reply==QMessageBox::No)
+       {
+            QMessageBox:: StandardButton reply1= QMessageBox::question(this, "Payment","Would you like to pay through wallet?",QMessageBox::Yes|QMessageBox::No);
+            if (reply1==QMessageBox::Yes)
+            {
+            Box1.setText(" Your package has been paid");
+            Box1.setWindowTitle("Payment");
+            Box1.exec();
+            this->close();
+            }
+            else
+            {
+            Box1.setText(" No deduction has been done");
+            Box1.setWindowTitle(" Payment");
+            Box1.exec();
+            this->close();
+            }
+      }
+    else {
+            Box1.setText("No deduction has been done");
+         Box1.setWindowTitle("Payment");
+        }
+}

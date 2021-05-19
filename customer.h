@@ -1,6 +1,6 @@
 #ifndef CUSTOMER_H
 #define CUSTOMER_H
-
+#include"wallet.h"
 #include <QMainWindow>
 #include"trip.h"
 
@@ -42,6 +42,7 @@ private:
     int points;
     int NumberOfTrips;
     Trip currentTrip;
+    Wallet CustomerWallet;
     Ui::Customer *ui;
 };
 

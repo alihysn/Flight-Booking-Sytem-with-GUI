@@ -11,10 +11,12 @@ private:
     int ExpiryMonth;
     int ExpiryDate;
     bool IsValid;
+    int Balance;
 public:
     Card();
     bool Validity();
-    int Pay();
+    void Pay(Price CustomerPrice);
+
 };
 
 #endif // CARD_H

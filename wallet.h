@@ -6,15 +6,16 @@
 class Wallet: public Price
 {
 private:
-    int Balance;
+    int Balance=2000;
 public:
     Wallet();
     void CheckBalance();
-    int Pay();
-    int Recharge();
-
+    void Pay(Price CustomerPrice);
+    void Recharge();
+    int getBalance();
 
 
 };
+
 
 #endif // WALLET_H
