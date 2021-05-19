@@ -4,12 +4,14 @@ Rating::Rating()
 {
 
 }
-void Rating::rateflight(float c)
+void Rating::rateflight(int c)
 {
-
+Frate=Frate+c;
+Frate=Frate/2;
 }
-void Rating::ratehotel(float d)
+void Rating::ratehotel(int d)
 {
-
+Hrate=Hrate+d;
+Hrate=Hrate/2;
 }
 
