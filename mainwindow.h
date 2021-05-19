@@ -37,6 +37,12 @@ private slots:
 
     void on_Inquiries_clicked();
 
+    void on_pushButton_6_clicked();
+
+    void on_calendar1_selectionChanged();
+
+    void on_calendar2_selectionChanged();
+
 private:
     Ui::MainWindow *ui;
     bool isLoggedIn=false;

@@ -137,7 +137,7 @@ void MainWindow::on_pushButton_9_clicked()
             }
             else
             {
-            Box1.setText(" No deduction has been done");
+            Box1.setText("No deduction has been done");
             Box1.setWindowTitle(" Payment");
             Box1.exec();
             this->close();
@@ -153,4 +153,163 @@ void MainWindow::on_Inquiries_clicked()
 {
     fsp *pagefour =new fsp;
     pagefour->show();
+}
+
+void MainWindow::on_pushButton_6_clicked()
+{
+
+}
+
+void MainWindow::on_calendar1_selectionChanged()
+{
+    QString str = QString::number(ui->calendar1->selectedDate().month());
+    if (str == "1")
+    {
+        QString str2 = QString::number(ui->calendar1->selectedDate().year());
+        QString str3 = QString::number(ui->calendar1->selectedDate().day());
+        ui->lineEdit->setText( str2+"-"+"1"+"-"+str3);
+    }
+    else if (str == "2")
+    {
+        QString str2 = QString::number(ui->calendar1->selectedDate().year());
+        QString str3 = QString::number(ui->calendar1->selectedDate().day());
+        ui->lineEdit->setText( str2+"-"+"2"+"-"+str3);
+    }
+    else if (str == "3")
+    {
+        QString str2 = QString::number(ui->calendar1->selectedDate().year());
+        QString str3 = QString::number(ui->calendar1->selectedDate().day());
+        ui->lineEdit->setText( str2+"-"+"3"+"-"+str3);
+    }
+    else if (str == "4")
+    {
+        QString str2 = QString::number(ui->calendar1->selectedDate().year());
+        QString str3 = QString::number(ui->calendar1->selectedDate().day());
+        ui->lineEdit->setText( str2+"-"+"4"+"-"+str3);
+    }
+    else if (str == "5")
+    {
+        QString str2 = QString::number(ui->calendar1->selectedDate().year());
+        QString str3 = QString::number(ui->calendar1->selectedDate().day());
+        ui->lineEdit->setText( str2+"-"+"5"+"-"+str3);
+    }
+    else if (str == "6")
+    {
+        QString str2 = QString::number(ui->calendar1->selectedDate().year());
+        QString str3 = QString::number(ui->calendar1->selectedDate().day());
+        ui->lineEdit->setText( str2+"-"+"6"+"-"+str3);
+    }
+    else if (str == "7")
+    {
+        QString str2 = QString::number(ui->calendar1->selectedDate().year());
+        QString str3 = QString::number(ui->calendar1->selectedDate().day());
+        ui->lineEdit->setText( str2+"-"+"7"+"-"+str3);
+    }
+    else if (str == "8")
+    {
+        QString str2 = QString::number(ui->calendar1->selectedDate().year());
+        QString str3 = QString::number(ui->calendar1->selectedDate().day());
+        ui->lineEdit->setText( str2+"-"+"8"+"-"+str3);
+    }
+    else if (str == "9")
+    {
+        QString str2 = QString::number(ui->calendar1->selectedDate().year());
+        QString str3 = QString::number(ui->calendar1->selectedDate().day());
+        ui->lineEdit->setText( str2+"-"+"9"+"-"+str3);
+    }
+    else if (str == "10")
+    {
+        QString str2 = QString::number(ui->calendar1->selectedDate().year());
+        QString str3 = QString::number(ui->calendar1->selectedDate().day());
+        ui->lineEdit->setText( str2+"-"+"10"+"-"+str3);
+    }
+    else if (str == "11")
+    {
+        QString str2 = QString::number(ui->calendar1->selectedDate().year());
+        QString str3 = QString::number(ui->calendar1->selectedDate().day());
+        ui->lineEdit->setText( str2+"-"+"11"+"-"+str3);
+    }
+    else if (str == "12")
+    {
+        QString str2 = QString::number(ui->calendar1->selectedDate().year());
+        QString str3 = QString::number(ui->calendar1->selectedDate().day());
+        ui->lineEdit->setText( str2+"-"+"12"+"-"+str3);
+    }
+}
+
+void MainWindow::on_calendar2_selectionChanged()
+{
+    QString str = QString::number(ui->calendar2->selectedDate().month());
+    if (str == "1")
+    {
+        QString str2 = QString::number(ui->calendar2->selectedDate().year());
+        QString str3 = QString::number(ui->calendar2->selectedDate().day());
+        ui->lineEdit_2->setText( str2+"-"+"1"+"-"+str3);
+    }
+    else if (str == "2")
+    {
+        QString str2 = QString::number(ui->calendar2->selectedDate().year());
+        QString str3 = QString::number(ui->calendar2->selectedDate().day());
+        ui->lineEdit_2->setText( str2+"-"+"2"+"-"+str3);
+    }
+    else if (str == "3")
+    {
+        QString str2 = QString::number(ui->calendar2->selectedDate().year());
+        QString str3 = QString::number(ui->calendar2->selectedDate().day());
+        ui->lineEdit_2->setText( str2+"-"+"3"+"-"+str3);
+    }
+    else if (str == "4")
+    {
+        QString str2 = QString::number(ui->calendar2->selectedDate().year());
+        QString str3 = QString::number(ui->calendar2->selectedDate().day());
+        ui->lineEdit_2->setText( str2+"-"+"4"+"-"+str3);
+    }
+    else if (str == "5")
+    {
+        QString str2 = QString::number(ui->calendar2->selectedDate().year());
+        QString str3 = QString::number(ui->calendar2->selectedDate().day());
+        ui->lineEdit_2->setText( str2+"-"+"5"+"-"+str3);
+    }
+    else if (str == "6")
+    {
+        QString str2 = QString::number(ui->calendar2->selectedDate().year());
+        QString str3 = QString::number(ui->calendar2->selectedDate().day());
+        ui->lineEdit_2->setText( str2+"-"+"6"+"-"+str3);
+    }
+    else if (str == "7")
+    {
+        QString str2 = QString::number(ui->calendar2->selectedDate().year());
+        QString str3 = QString::number(ui->calendar2->selectedDate().day());
+        ui->lineEdit_2->setText( str2+"-"+"7"+"-"+str3);
+    }
+    else if (str == "8")
+    {
+        QString str2 = QString::number(ui->calendar2->selectedDate().year());
+        QString str3 = QString::number(ui->calendar2->selectedDate().day());
+        ui->lineEdit_2->setText( str2+"-"+"8"+"-"+str3);
+    }
+    else if (str == "9")
+    {
+        QString str2 = QString::number(ui->calendar2->selectedDate().year());
+        QString str3 = QString::number(ui->calendar2->selectedDate().day());
+        ui->lineEdit_2->setText( str2+"-"+"9"+"-"+str3);
+    }
+    else if (str == "10")
+    {
+        QString str2 = QString::number(ui->calendar2->selectedDate().year());
+        QString str3 = QString::number(ui->calendar2->selectedDate().day());
+        ui->lineEdit_2->setText( str2+"-"+"10"+"-"+str3);
+    }
+    else if (str == "11")
+    {
+        QString str2 = QString::number(ui->calendar2->selectedDate().year());
+        QString str3 = QString::number(ui->calendar2->selectedDate().day());
+        ui->lineEdit_2->setText( str2+"-"+"11"+"-"+str3);
+    }
+    else if (str == "12")
+    {
+        QString str2 = QString::number(ui->calendar2->selectedDate().year());
+        QString str3 = QString::number(ui->calendar2->selectedDate().day());
+        ui->lineEdit_2->setText( str2+"-"+"12"+"-"+str3);
+    }
 }

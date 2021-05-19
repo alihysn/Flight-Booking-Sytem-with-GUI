@@ -28,7 +28,7 @@ fsp::~fsp()
 }
 void fsp::on_pushButton_clicked()
 {
-    FindShortestPath *TR = new FindShortestPath();
+    FindShortestPath tr2;
     QMessageBox box;
     QString fromm=ui->comboBox->currentText();
     QString too=ui->comboBox_2->currentText();
@@ -54,5 +54,5 @@ void fsp::on_pushButton_clicked()
         T=3;
     else if(fromm=="California")
         T=4;
-   TR->FindShortestPathf(graph,F,T);
+   tr2.FindShortestPathfinder(tr2.graph,F,T);
 }

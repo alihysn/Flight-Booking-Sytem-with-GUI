@@ -4,7 +4,9 @@
 #include <QString>
 #include <QVector>
 #include <QMessageBox>
+
 using namespace std;
+
 int FindShortestPath::mindistance(int dist[], bool visited[])
 {
     int min = INT_MAX;
@@ -14,7 +16,7 @@ int FindShortestPath::mindistance(int dist[], bool visited[])
             min = dist[v], min_index = v;
     return min_index;
 }
-void FindShortestPath::FindShortestPathf(int graph[V][V], int src, int destt)
+void FindShortestPath::FindShortestPathfinder(int graphh[V][V], int src, int destt)
 {
     int dist[V];
     bool visited[V];
@@ -31,10 +33,10 @@ void FindShortestPath::FindShortestPathf(int graph[V][V], int src, int destt)
         int u = mindistance(dist, visited);
         visited[u] = true;
         for (int v = 0; v < V; v++)
-            if (!visited[v] && graph[u][v] && dist[u] + graph[u][v] < dist[v])
+            if (!visited[v] && graphh[u][v] && dist[u] + graphh[u][v] < dist[v])
             {
                 parent[v] = u;
-                dist[v] = dist[u] + graph[u][v];
+                dist[v] = dist[u] + graphh[u][v];
             }
     }
     QVector <int> path;
