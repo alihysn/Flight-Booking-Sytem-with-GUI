@@ -7,9 +7,8 @@ QT_BEGIN_NAMESPACE
 namespace Ui { class hotelreservations; }
 QT_END_NAMESPACE
 
-class hotelreservations : public QDialog
+class hotelreservations : public QMainWindow
 {
-    Q_OBJECT
     bool foundhotel;
 
 public:

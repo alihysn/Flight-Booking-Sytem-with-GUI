@@ -15,13 +15,15 @@ QT += sql
 SOURCES += \
     Hsearch.cpp \
     card.cpp \
+    creditpay.cpp \
     customer.cpp \
     customerlogin.cpp \
     facilities.cpp \
     findshortestpath.cpp \
+    flight.cpp \
     fsp.cpp \
     hotel.cpp \
-    hotelreservations.cpp \
+    hotelreservation.cpp \
     invoice.cpp \
     mail.cpp \
     main.cpp \
@@ -39,13 +41,15 @@ SOURCES += \
 HEADERS += \
     Hsearch.h \
     card.h \
+    creditpay.h \
     customer.h \
     customerlogin.h \
     facilities.h \
     findshortestpath.h \
+    flight.h \
     fsp.h \
     hotel.h \
-    hotelreservations.h \
+    hotelreservation.h \
     invoice.h \
     mail.h \
     mainwindow.h \
@@ -61,10 +65,11 @@ HEADERS += \
 
 FORMS += \
     Hsearch.ui \
+    creditpay.ui \
     customer.ui \
     customerlogin.ui \
     fsp.ui \
-    hotelreservations.ui \
+    hotelreservation.ui \
     mail.ui \
     mainwindow.ui \
     ratingpage.ui \

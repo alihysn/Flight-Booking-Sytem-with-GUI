@@ -10,6 +10,8 @@
 #include "invoice.h"
 #include<QMessageBox>
 #include "fsp.h"
+#include"creditpay.h"
+
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
@@ -33,6 +35,7 @@ MainWindow::MainWindow(QWidget *parent)
     database.close();
     ui->calendar1->setVisible(false);
     ui->calendar2->setVisible(false);
+    ui->pushButton_10->setVisible(false);
 }
 
 void MainWindow::refresher()
@@ -96,6 +99,7 @@ void MainWindow::on_pushButton_3_clicked()
     if(isLoggedIn == true)
     {
         ui->helloMsg->setText(data[custIndex]->getName());
+        ui->pushButton_10->setVisible(true);
     }
 }
 
@@ -133,19 +137,11 @@ void MainWindow::on_pushButton_9_clicked()
             Box1.setText(" Your package has been paid");
             Box1.setWindowTitle("Payment");
             Box1.exec();
-            this->close();
-            }
-            else
-            {
-            Box1.setText("No deduction has been done");
-            Box1.setWindowTitle(" Payment");
-            Box1.exec();
-            this->close();
             }
       }
-    else {
-            Box1.setText("No deduction has been done");
-         Box1.setWindowTitle("Payment");
+    else if (reply == QMessageBox::Yes) {
+        creditPay *crPay = new creditPay();
+        crPay->show();
         }
 }
 
@@ -157,7 +153,22 @@ void MainWindow::on_Inquiries_clicked()
 
 void MainWindow::on_pushButton_6_clicked()
 {
-
+    if (isLoggedIn == false)
+    {
+        QMessageBox box;
+        box.setText("YOU ARE NOT LOGGED IN!");
+        box.exec();
+    }
+    else
+    {
+        if (ui->checkBox->isChecked() == false)
+        {
+            QString fromD = ui->lineEdit->text();
+            QString toD = ui->lineEdit_2->text();
+            QString flight = ui->lineEdit_3->text();
+            data[custIndex]->reserve(fromD, toD, flight);
+        }
+    }
 }
 
 void MainWindow::on_calendar1_selectionChanged()

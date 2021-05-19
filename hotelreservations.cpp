@@ -6,6 +6,7 @@
 #include <QString>
 #include<string>
 #include<qinputdialog.h>
+
 hotelreservations::hotelreservations(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::hotelreservations)
@@ -18,7 +19,6 @@ hotelreservations::~hotelreservations()
     delete ui;
 }
 
-
 void hotelreservations::on_pushButton_clicked()
 {
     QString enteredid = QInputDialog::getText(this, "enter","enter the id of your desired hotel");
@@ -29,7 +29,8 @@ void hotelreservations::on_pushButton_clicked()
     database.setDatabaseName("/media/mohamed/01D674211A1C18801/AUC/Freshman/Spring 2021/CSCE1101-03 - Fundamentals of Computing II/Project/ProjectDB");
     database.open();
     QSqlQuery query;
-    query.exec("SELECT * from Hotel Where ID=AY_VALUE");
+    QString str = ui->lineEdit->text();
+    query.exec("SELECT * from Hotel Where ID="+str+"");
     query.exec();
     QString id;
     while (query.next()&& foundhotel == false)

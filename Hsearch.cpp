@@ -97,7 +97,7 @@ void Hsearch::on_pushButton_3_clicked()
     {
            QString str= QString::number(final[i]);
     QSqlQuery query;
-    query.exec("SELECT Price, Rating FROM Flights WHERE DistanceFromAirport = "+str+"");
+    query.exec("SELECT Price, Rating FROM Hotels WHERE DistanceFromAirport = "+str+"");
     QString test;
     while (query.next())
     {

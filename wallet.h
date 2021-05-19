@@ -6,7 +6,7 @@
 class Wallet: public Price
 {
 private:
-    int Balance=2000;
+    int Balance=20000;
 public:
     Wallet();
     void CheckBalance();

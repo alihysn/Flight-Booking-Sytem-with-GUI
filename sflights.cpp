@@ -43,15 +43,19 @@ void SFlights::on_orderbyprice_clicked()
        {
        QString str= QString::number(final[i]);
        QSqlQuery query;
-       query.exec("SELECT Airline, Price, Rating FROM Flights WHERE Price= "+str+"");
+       query.exec("SELECT ID, Price FROM Flights WHERE Price= "+str+"");
        QString test;
+       QString test1;
        while (query.next())
        {
            test = query.value(0).toString();
+           test1 = query.value(1).toString();
            break;
        }
        box.setWindowTitle("sorted by price");
        box.setText(test);
+       box.exec();
+       box.setText(test1);
        box.exec();
        i=i+1;
        } while(i<final.size());

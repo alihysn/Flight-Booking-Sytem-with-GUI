@@ -129,10 +129,15 @@ Customer* Customer::returnCust()
 
 void Customer::priceGetter()
 {
-    float pr = currentTrip.getTotalPrice();
+    float pr = currentTrip.getPrice();
     QString st = QString::number(pr);
     QMessageBox box;
     box.setText(st);
     box.setWindowTitle("Total price:");
     box.exec();
+}
+
+void Customer::reserve(QString fD, QString tD, QString flight)
+{
+    currentTrip.createTrip(fD,tD,flight);
 }

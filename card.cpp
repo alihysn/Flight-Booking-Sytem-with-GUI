@@ -1,6 +1,7 @@
 #include "card.h"
 #include"paymentmethod.h"
 #include"wallet.h"
+#include<QString>
 
 Card::Card()
 {
@@ -28,10 +29,11 @@ bool Card::Validity()
           }
 }
 
-void Card::Pay(Price CustomerPrice)
+void Card::Pay(QString number,QString pin,QString from,QString expiry)
 {
+    Price customerPrice;
     if (Validity()==1)
     {
-        Balance= Balance - CustomerPrice.getTotalPrice();
+        Balance= Balance - customerPrice.getTotalPrice();
     }
 }

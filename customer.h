@@ -22,6 +22,7 @@ public:
     QString getName();
     Customer* returnCust();
     void priceGetter();
+    void reserve(QString fD, QString tD, QString flight);
     ~Customer();
 
 private slots:
