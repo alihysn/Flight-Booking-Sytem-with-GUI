@@ -9,7 +9,7 @@
 #include"mail.h"
 #include "invoice.h"
 #include<QMessageBox>
-
+#include "fsp.h"
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
@@ -147,4 +147,10 @@ void MainWindow::on_pushButton_9_clicked()
             Box1.setText("No deduction has been done");
          Box1.setWindowTitle("Payment");
         }
+}
+
+void MainWindow::on_Inquiries_clicked()
+{
+    fsp *pagefour =new fsp;
+    pagefour->show();
 }

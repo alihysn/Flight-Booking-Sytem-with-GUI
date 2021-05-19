@@ -35,6 +35,8 @@ private slots:
 
     void on_pushButton_9_clicked();
 
+    void on_Inquiries_clicked();
+
 private:
     Ui::MainWindow *ui;
     bool isLoggedIn=false;

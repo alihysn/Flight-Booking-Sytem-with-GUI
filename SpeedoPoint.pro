@@ -19,6 +19,7 @@ SOURCES += \
     customerlogin.cpp \
     facilities.cpp \
     findshortestpath.cpp \
+    fsp.cpp \
     hotel.cpp \
     invoice.cpp \
     mail.cpp \
@@ -41,6 +42,7 @@ HEADERS += \
     customerlogin.h \
     facilities.h \
     findshortestpath.h \
+    fsp.h \
     hotel.h \
     invoice.h \
     mail.h \
@@ -59,6 +61,7 @@ FORMS += \
     Hsearch.ui \
     customer.ui \
     customerlogin.ui \
+    fsp.ui \
     mail.ui \
     mainwindow.ui \
     ratingpage.ui \
