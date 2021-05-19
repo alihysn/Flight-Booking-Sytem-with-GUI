@@ -16,6 +16,7 @@ public:
     FindShortestPath();
     int mindistance();
     void FindShortestPathf();
+    void printpath(int parent[],int j);
 };
 
 #endif // FINDSHORTESTPATH_H
