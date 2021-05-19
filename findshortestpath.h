@@ -14,9 +14,9 @@ class FindShortestPath
 
 public:
     FindShortestPath();
-    int mindistance();
-    void FindShortestPathf();
-    void printpath(int parent[],int j);
+    int mindistance(int dist[],bool isvisited[]);
+    void FindShortestPathf(int graph[V][V],int src, int destt);
+    void printpath(QVector<int> path);
 };
 
 #endif // FINDSHORTESTPATH_H

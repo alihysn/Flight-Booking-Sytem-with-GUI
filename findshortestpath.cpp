@@ -3,10 +3,9 @@
 #include <climits>
 #include <QString>
 #include <QVector>
-#include <list>
-#include <queue>
+#include <QMessageBox>
 using namespace std;
-int mindistance(int dist[], bool visited[])
+int FindShortestPath::mindistance(int dist[], bool visited[])
 {
     int min = INT_MAX;
     int min_index;
@@ -15,7 +14,7 @@ int mindistance(int dist[], bool visited[])
             min = dist[v], min_index = v;
     return min_index;
 }
-void FindShortestPathf(int graph[V][V], int src)
+void FindShortestPath::FindShortestPathf(int graph[V][V], int src, int destt)
 {
     int dist[V];
     bool visited[V];
@@ -38,8 +37,41 @@ void FindShortestPathf(int graph[V][V], int src)
                 dist[v] = dist[u] + graph[u][v];
             }
     }
+    QVector <int> path;
+   int i=src;
+       do
+       {
+       if (i<4)
+          { path.push_back(i);
+           i++;}
+       else if(i==4)
+       {
+           i=0;
+           {
+               path.push_back(i);
+               i++;
+           }
+       }
+       }while(i!=destt);
 }
-void FindShortestPath::printpath(int parent[],int j)
+void FindShortestPath::printpath(QVector<int> paths)
 {
-
+     QMessageBox box;
+     QString str;
+    for (int i=0;i<V;i++)
+    {
+        if(paths[i]==0)
+            str= "cairo";
+        else if(paths[i]==1)
+            str="Rome";
+        else if(paths[i]==2)
+            str="Paris";
+        else if (paths[i]==3)
+            str="Capetown";
+        else if (paths[i]==4)
+            str="California";
+    box.setWindowTitle("Your best options are");
+    box.setText(str);
+    box.exec();
+    }
 }
