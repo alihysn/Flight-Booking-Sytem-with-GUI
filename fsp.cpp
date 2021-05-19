@@ -4,6 +4,7 @@
 #include<QtSql/QSqlDatabase>
 #include<QtSql/QSqlQuery>
 #include "findshortestpath.h"
+
 fsp::fsp(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::fsp)
@@ -25,9 +26,9 @@ fsp::~fsp()
 {
     delete ui;
 }
-FindShortestPath TR;
 void fsp::on_pushButton_clicked()
 {
+    FindShortestPath *TR = new FindShortestPath();
     QMessageBox box;
     QString fromm=ui->comboBox->currentText();
     QString too=ui->comboBox_2->currentText();
@@ -53,5 +54,5 @@ void fsp::on_pushButton_clicked()
         T=3;
     else if(fromm=="California")
         T=4;
-TR.FindShortestPathf(graph,F,T);
+   TR->FindShortestPathf(graph,F,T);
 }

@@ -1,5 +1,6 @@
 #ifndef FSP_H
 #define FSP_H
+#include"findshortestpath.h"
 
 #include <QDialog>
 
