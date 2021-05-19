@@ -53,6 +53,7 @@ void FindShortestPath::FindShortestPathf(int graph[V][V], int src, int destt)
            }
        }
        }while(i!=destt);
+   printpath(path);
 }
 void FindShortestPath::printpath(QVector<int> paths)
 {
