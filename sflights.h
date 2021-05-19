@@ -16,13 +16,13 @@ public:
     ~SFlights();
 
 private slots:
-    void on_pushButton_clicked();
+    void on_orderoflocation_clicked();
 
-    void on_pushButton_2_clicked();
+    void on_orderfordestination_clicked();
 
-    void on_pushButton_3_clicked();
+    void on_orderbyprice_clicked();
 
-    void on_pushButton_4_clicked();
+    void on_orderbyrating_clicked();
 
 private:
     Ui::SFlights *ui;

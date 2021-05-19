@@ -18,7 +18,7 @@ SFlights::~SFlights()
 }
 
 
-void SFlights::on_pushButton_clicked()
+void SFlights::on_orderbyprice_clicked()
 {
     QMessageBox box;
     QVector<float> final;
@@ -42,7 +42,7 @@ void SFlights::on_pushButton_clicked()
     database.close();
 }
 
-void SFlights::on_pushButton_2_clicked()
+void SFlights::on_orderbyrating_clicked()
 {
     QMessageBox box;
     QVector<float> final;
@@ -65,7 +65,7 @@ void SFlights::on_pushButton_2_clicked()
     database.close();
 }
 
-void SFlights::on_pushButton_3_clicked()
+void SFlights::on_orderoflocation_clicked()
 {
     QMessageBox box;
     QString fromm;
@@ -88,8 +88,7 @@ void SFlights::on_pushButton_3_clicked()
     box.exec();
     database.close();
 }
-
-void SFlights::on_pushButton_4_clicked()
+void SFlights::on_orderfordestination_clicked()
 {
     QMessageBox box;
     QString too;

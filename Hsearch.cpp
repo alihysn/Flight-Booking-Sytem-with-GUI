@@ -104,7 +104,7 @@ void Hsearch::on_pushButton_4_clicked()
     database.setDatabaseName("/media/mohamed/01D674211A1C18801/AUC/Freshman/Spring 2021/CSCE1101-03 - Fundamentals of Computing II/Project/ProjectDB");
     database.open();
     QSqlQuery query;
-    query.prepare("SELECT Price, Rating FROM Hotels WHERE location = city");
+    query.prepare("SELECT Price, Rating FROM Hotels WHERE to = city");
     query.exec();
     QString test;
     while (query.next())
