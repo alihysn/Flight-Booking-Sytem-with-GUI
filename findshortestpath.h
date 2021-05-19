@@ -9,11 +9,11 @@ using namespace std;
 class FindShortestPath
 {
 public:
-    int graph[V][V] = { {0, 4, 0, 0, 0},
-                        {4, 0, 8, 0, 0},
-                         {0, 8, 0, 7, 0},
-                         {0, 0, 7, 0, 9},
-                         {0, 0, 0, 9, 0}};
+    int graph[V][V] = { {0, 1, 6, 8, 10},
+                        {1, 0, 1, 6, 8},
+                        {6, 1, 0, 1, 6},
+                        {8, 6, 1, 0, 1},
+                        {10, 8, 6, 1, 0}};
     int mindistance(int dist[],bool isvisited[]);
     void FindShortestPathfinder(int graphh[5][5],int src, int destt);
     void printpath(QVector<int> path);
